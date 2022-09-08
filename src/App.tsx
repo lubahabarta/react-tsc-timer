@@ -30,6 +30,9 @@ const App = () => {
                         <Route path="/Timer">
                             <div>Timer</div>
                         </Route>
+                        <Route path="/*">
+                            <div>Page not found</div>
+                        </Route>
                     </Switch>
                 </main>
 
