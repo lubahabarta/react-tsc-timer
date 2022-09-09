@@ -5,6 +5,7 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
+    NavLink,
     Redirect,
 } from "react-router-dom";
 // components
@@ -17,20 +18,29 @@ const App = () => {
     return (
         <div className="app">
             <Router>
-                <Switch>
-                    <Route exact path="/">
-                        <Redirect to="/Stopwatch" />
-                    </Route>
-                    <Route path="/Stopwatch">
-                        <Stopwatch />
-                    </Route>
-                    <Route path="/Timer">
-                        <Timer />
-                    </Route>
-                    <Route path="/*">
-                        <NotFound />
-                    </Route>
-                </Switch>
+
+                <nav>
+                    <NavLink to="/Stopwatch">Stopwatch</NavLink>
+                    <NavLink to="/Timer">Timer</NavLink>
+                </nav>
+
+                <main>
+                    <Switch>
+                        <Route exact path="/">
+                            <Redirect to="/Stopwatch" />
+                        </Route>
+                        <Route path="/Stopwatch">
+                            <Stopwatch />
+                        </Route>
+                        <Route path="/Timer">
+                            <Timer />
+                        </Route>
+                        <Route path="/*">
+                            <NotFound />
+                        </Route>
+                    </Switch>
+                </main>
+
             </Router>
         </div>
     );
