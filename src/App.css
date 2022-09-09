@@ -8,6 +8,8 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 nav a {
@@ -17,7 +19,6 @@ nav a {
     width: 50vw;
 
     border-right: 1px solid rgba(0, 0, 0, 0.2);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 
     font-weight: 600;
     font-size: 7vw;
@@ -26,4 +27,8 @@ nav a {
 
 nav a:last-child {
     border-right: 0;
+}
+
+.active {
+    border-bottom: 1.2vw solid rgba(0, 0, 0, 0.2);
 }
