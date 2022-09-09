@@ -8,6 +8,8 @@ import {
     Link,
     Redirect
 } from "react-router-dom";
+// components
+import NotFound from './NotFound';
 
 const App = () => {
     return (
@@ -31,7 +33,7 @@ const App = () => {
                             <div>Timer</div>
                         </Route>
                         <Route path="/*">
-                            <div>Page not found</div>
+                            <NotFound />
                         </Route>
                     </Switch>
                 </main>
