@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 // react-router-dom
 import {
@@ -14,13 +14,24 @@ import Stopwatch from './Stopwatch';
 import Timer from './Timer';
 
 const App = () => {
+
+    const [timerActive, setTimerActive] = useState<boolean>(false);
+
     return (
         <div className="app">
             <Router>
 
                 <nav>
-                    <Link to="/Stopwatch">Stopwatch</Link>
-                    <Link to="/Timer">Timer</Link>
+                    <Link
+                        className={!timerActive ? "active" : ""}
+                        to="/Stopwatch"
+                        onClick={() => setTimerActive(false)}
+                    >Stopwatch</Link>
+                    <Link
+                        className={timerActive ? "active" : ""}
+                        to="/Timer"
+                        onClick={() => setTimerActive(true)}
+                    >Timer</Link>
                 </nav>
 
                 <main>
