@@ -10,6 +10,8 @@ import {
 } from "react-router-dom";
 // components
 import NotFound from './NotFound';
+import Stopwatch from './Stopwatch';
+import Timer from './Timer';
 
 const App = () => {
     return (
@@ -27,10 +29,10 @@ const App = () => {
                             <Redirect to="/Stopwatch" />
                         </Route>
                         <Route path="/Stopwatch">
-                            <div>Stopwatch</div>
+                            <Stopwatch />
                         </Route>
                         <Route path="/Timer">
-                            <div>Timer</div>
+                            <Timer />
                         </Route>
                         <Route path="/*">
                             <NotFound />
