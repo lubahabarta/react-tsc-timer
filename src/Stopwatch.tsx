@@ -8,6 +8,8 @@ const Stopwatch = () => {
     const [seconds, setSeconds] = useState<number>(0);
     const [millisec, setMillisec] = useState<number>(0);
 
+    const [clockIsRunning, setClockIsRunning] = useState<boolean>(false);
+
     return (
         <div className="stopwatch">
 
@@ -27,7 +29,7 @@ const Stopwatch = () => {
             </p>
 
             <section className='buttons'>
-                {true ? (
+                {!clockIsRunning ? (
                     <button className='button-start'>Start</button>
                 ) : (
                     <button className='button-stop'>Stop</button>
