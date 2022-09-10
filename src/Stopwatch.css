@@ -35,6 +35,12 @@
     border-radius: 13vw;
 
     margin: 0 1vw;
+
+    cursor: pointer;
+}
+
+.buttons>button:active {
+    scale: 0.95;
 }
 
 .button-start {
