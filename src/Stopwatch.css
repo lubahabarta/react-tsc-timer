@@ -1,8 +1,32 @@
+.stopwatch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .clock {
     font-size: 13vw;
     font-weight: bold;
+
+    margin-bottom: 5vw;
 }
 
 .millisec {
     font-size: 7vw;
+}
+
+.buttons>button {
+    width: 13vw;
+    height: 13vw;
+
+    background-color: inherit;
+
+    font-family: inherit;
+    font-size: 3.5vw;
+    font-weight: bold;
+
+    border: 0.5vw solid black;
+    border-radius: 13vw;
+
+    margin: 0 1vw;
 }
