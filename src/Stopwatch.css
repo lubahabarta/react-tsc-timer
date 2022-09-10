@@ -43,6 +43,7 @@
     scale: 0.95;
 }
 
+/* START */
 .button-start {
     border: solid #8eb900;
     color: #8eb900;
@@ -54,6 +55,7 @@
     color: white;
 }
 
+/* STOP */
 .button-stop {
     border: solid #b90000;
     color: #b90000;
@@ -62,5 +64,29 @@
 .button-stop:hover,
 .button-stop:active {
     background-color: #b90000;
+    color: white;
+}
+
+/* SPLIT */
+.button-split {
+    border: solid orange;
+    color: orange;
+}
+
+.button-split:hover,
+.button-split:active {
+    background-color: orange;
+    color: white;
+}
+
+/* RESET */
+.button-reset {
+    border: solid #0E86D4;
+    color: #0E86D4;
+}
+
+.button-reset:hover,
+.button-reset:active {
+    background-color: #0E86D4;
     color: white;
 }
