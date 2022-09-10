@@ -24,11 +24,19 @@ const Stopwatch = () => {
 
     useEffect(() => {
         if (clockIsRunning) {
-            console.log("clock start");
-        } else {
-            console.log("clock stopps");
+            let interval = setInterval(startClock, 10);
+            return (() => {
+                clearInterval(interval);
+            })
         }
     }, [clockIsRunning]);
+
+    useEffect(() => {
+        if (millisec > 99) {
+            setSeconds(prev => prev + 1);
+            setMillisec(prev => prev = 0);
+        }
+    }, [millisec]);
 
     return (
         <div className="stopwatch">
