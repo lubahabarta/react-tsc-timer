@@ -18,29 +18,29 @@ const App = () => {
     return (
         <div className="app">
             <Router>
+                <div className="wrapper">
+                    <nav>
+                        <NavLink to="/Stopwatch">Stopwatch</NavLink>
+                        <NavLink to="/Timer">Timer</NavLink>
+                    </nav>
 
-                <nav>
-                    <NavLink to="/Stopwatch">Stopwatch</NavLink>
-                    <NavLink to="/Timer">Timer</NavLink>
-                </nav>
-
-                <main>
-                    <Switch>
-                        <Route exact path="/">
-                            <Redirect to="/Stopwatch" />
-                        </Route>
-                        <Route path="/Stopwatch">
-                            <Stopwatch />
-                        </Route>
-                        <Route path="/Timer">
-                            <Timer />
-                        </Route>
-                        <Route path="/*">
-                            <NotFound />
-                        </Route>
-                    </Switch>
-                </main>
-
+                    <main>
+                        <Switch>
+                            <Route exact path="/">
+                                <Redirect to="/Stopwatch" />
+                            </Route>
+                            <Route path="/Stopwatch">
+                                <Stopwatch />
+                            </Route>
+                            <Route path="/Timer">
+                                <Timer />
+                            </Route>
+                            <Route path="/*">
+                                <NotFound />
+                            </Route>
+                        </Switch>
+                    </main>
+                </div>
             </Router>
         </div>
     );

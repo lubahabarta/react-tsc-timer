@@ -90,3 +90,34 @@
     background-color: #0E86D4;
     color: white;
 }
+
+
+
+@media screen and (min-width: 768px) {
+    .clock {
+        font-size: 7vw;
+        margin-bottom: 2.5vw;
+    }
+
+    .millisec {
+        font-size: 4vw;
+    }
+
+    .buttons>button {
+        width: 7vw;
+        height: 7vw;
+
+        background-color: inherit;
+
+        font-family: inherit;
+        font-size: 1.5vw;
+        font-weight: bold;
+
+        border-width: 0.4vw;
+        border-radius: 7vw;
+
+        margin: 0 0.5vw;
+
+        cursor: pointer;
+    }
+}
